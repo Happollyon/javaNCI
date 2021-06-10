@@ -1,0 +1,26 @@
+/*
+ * created by Fagner Nunes
+ *
+ */
+ 
+import javax.swing.*;
+import java.lang.Math; 
+ public class GuessApp{
+ 
+ 	public static void main(String args[]){
+	
+		//variables
+		int number;
+		int guess;
+		String message;
+
+		// create obj
+		Guess myGuess;
+		// declare obj
+		myGuess= new Guess();
+
+		// randon number 
+		number = (int) ((Math.random() * (10 - 0)) + 0);
+		JOptionPane.showMessageDialog(null, number);
+	}
+ }		

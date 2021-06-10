@@ -1,0 +1,48 @@
+/*
+ * created by Fagner Nunes
+ *
+ */
+ 
+import javax.swing.*;
+import java.lang.Math; 
+ public class GuessingGameApp{
+ 
+ 	public static void main(String args[]){
+	
+		//variables
+		int number;
+		int guess;
+		String message;
+		String play= "yes";
+		do{
+
+			// create obj
+			GuessingGame myGuess;
+			// declare obj
+			myGuess= new GuessingGame();
+
+			// randon number 
+			number = (int) ((Math.random() * (10 - 0)) + 0);
+			myGuess.setNumber(number);
+			for(int i = 1; i<=3;i++)
+			{
+				guess = Integer.parseInt(JOptionPane.showInputDialog(null,"please enter a number between 0-10"));
+				myGuess.setGuess(guess);
+				//compute
+		
+				myGuess.compute();
+				message =  myGuess.getMessage();
+				JOptionPane.showMessageDialog(null,message);
+				if(message== "Congratualtions, you guessed correctly!")
+				{
+					break;	
+				}
+			}
+			play =JOptionPane.showInputDialog("Would you like to play again? yes or no?");
+						
+			
+		}while(play.equals("yes"));
+		
+		
+	}
+ }		

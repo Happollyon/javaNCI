@@ -1,0 +1,27 @@
+/*
+ *
+ * Created by Fagner Nunes*/
+
+import javax.swing.*;
+
+public class charCountApp{
+
+
+	public static void main(String args[]){
+	
+		String input;
+		change myWord;
+		myWord = new change();
+
+		input= JOptionPane.showInputDialog(null,"enter a word");
+		
+		myWord.setInput(input);
+		myWord.compute();
+
+		JOptionPane.showMessageDialog(null,myWord.getName());
+		
+	
+	
+	}
+	
+}
